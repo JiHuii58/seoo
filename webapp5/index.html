@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang Chính - Cửa Hàng Giày</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f9f9f9;
+        }
+
+        header {
+            background-color: #FF5722;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .btn {
+            display: inline-block;
+            margin: 10px 5px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            text-decoration: none;
+            text-align: center;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Phần hiển thị sản phẩm */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .product-card {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+            text-align: center;
+        }
+
+        .product-card img {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            transition: transform 0.3s;
+        }
+
+        .product-card img:hover {
+            transform: scale(1.1);
+        }
+
+        .product-card h3 {
+            font-size: 16px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .product-card p {
+            color: #777;
+            font-size: 14px;
+        }
+        /* Phần ưu đãi đặc biệt */
+.pr-detail-page .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.pr-detail-page .product-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+}
+
+.pr-detail-page .product-card img {
+    width: 100%;
+    max-height: 150px; /* Giới hạn chiều cao */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    object-fit: cover; /* Đảm bảo không bị méo ảnh */
+    transition: transform 0.3s;
+}
+
+.pr-detail-page .product-card img:hover {
+    transform: scale(1.1);
+}
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>🎉 Cửa Hàng Giày Thời Trang 🎉</h1>
+</header>
+
+<div class="container">
+    <!-- Trang chủ -->
+    <section id="home">
+        <h2>Chào Mừng Đến Với Cửa Hàng</h2>
+        <p>Khám phá những mẫu giày mới nhất và ưu đãi hấp dẫn của chúng tôi.</p>
+
+        <!-- Giày nổi bật -->
+        <h3>Giày Nổi Bật</h3>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="1.jpg" alt="Giày Sneaker Thể Thao">
+                <h3>Giày Sneaker Thể Thao</h3>
+                <p>Giá: 900,000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="11.jpg" alt="Giày Boot Da Nam">
+                <h3>Giày Boot Da Nam</h3>
+                <p>Giá: 1,200,000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="3.jpg" alt="Giày Cao Gót Nữ">
+                <h3>Giày Cao Gót Nữ</h3>
+                <p>Giá: 800,000 VND</p>
+            </div>
+        </div>
+
+        <button class="btn" onclick="showSection('details')">Xem Chi Tiết Sản Phẩm</button>
+        <button class="btn" onclick="showSection('promotion')">Ưu Đãi Đặc Biệt</button>
+    </section>
+
+    <!-- Chi tiết sản phẩm -->
+    <section id="details" class="hidden">
+        <h2>Chi Tiết Sản Phẩm</h2>
+        <div class="product-grid">
+            <!-- 10 sản phẩm -->
+            <div class="product-card">
+                <img src="1.jpg" alt="Giày 1">
+                <h3>Giày Thể Thao Nam</h3>
+                <p>Giá: 750,000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="11.jpg" alt="Giày 2">
+                <h3>Giày Lười Nữ</h3>
+                <p>Giá: 650,000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="3.jpg" alt="Giày 3">
+                <h3>Giày Boot Da Cao Cổ</h3>
+                <p>Giá: 1,500,000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="4.jpg" alt="Giày 4">
+                <h3>Giày Công Sở Nữ</h3>
+                <p>Giá: 850,000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="5.jpg" alt="Giày 5">
+                <h3>Giày Chạy Bộ</h3>
+                <p>Giá: 720,000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="6.jpg" alt="Giày 6">
+                <h3>Giày Thể Thao Trẻ Em</h3>
+                <p>Giá: 500,000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="7.jpg" alt="Giày 7">
+                <h3>Giày Cao Gót Sang Trọng</h3>
+                <p>Giá: 1,000,000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="8.jpg" alt="Giày 8">
+                <h3>Giày Sandal Nam</h3>
+                <p>Giá: 600,000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="9.jpg" alt="Giày 9">
+                <h3>Giày Da Nữ Cao Cấp</h3>
+                <p>Giá: 1,200,000 VND</p>
+            </div>
+            <div class="product-card">
+                <img src="10.jpg" alt="Giày 10">
+                <h3>Giày Mũi Nhọn Thanh Lịch</h3>
+                <p>Giá: 1,100,000 VND</p>
+            </div>
+        </div>
+        <button class="btn" onclick="showSection('home')">Quay lại Trang Chủ</button>
+    </section>
+
+    <!-- Khuyến mãi đặc biệt -->
+    <section id="promotion" class="hidden">
+        <div class="pr-detail-page">
+            <h2>🔥 Khuyến Mãi Cực Sốc Dành Riêng Cho Bạn 🔥</h2>
+            <p>Đừng bỏ lỡ cơ hội mua sắm các mẫu giày thời trang với giá ưu đãi trong tháng này! Áp dụng từ ngày <strong>01/11</strong> đến <strong>30/11</strong>.</p>
+
+            <!-- Thêm lưới hiển thị hình ảnh -->
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="bootsnam.png" alt="Giày Boots Nam Cá Tính">
+                    <h3>Giày Boots Nam Cá Tính</h3>
+                    <p>Giá khuyến mãi: 960,000 VND</p>
+                </div>
+                <div class="product-card">
+                    <img src="cocao.jpg" alt="Giày Cao Cổ Thể Thao">
+                    <h3>Giày Cao Cổ Thể Thao</h3>
+                    <p>Giá khuyến mãi: 1,200,000 VND</p>
+                </div>
+                <div class="product-card">
+                    <img src="luoinam.jpg" alt="Giày Lười Nam Thanh Lịch">
+                    <h3>Giày Lười Nam Thanh Lịch</h3>
+                    <p>Giá khuyến mãi: 750,000 VND</p>
+                </div>
+            </div>
+
+            <ul>
+                <li>Giảm <strong>20%</strong> cho tất cả sản phẩm.</li>
+                <li>Miễn phí vận chuyển cho đơn hàng từ <strong>500,000 VND</strong>.</li>
+                <li>Tặng quà bất ngờ cho hóa đơn trên <strong>1,000,000 VND</strong>.</li>
+                <li>Cam kết sản phẩm chính hãng, bảo hành đổi trả trong 30 ngày.</li>
+                <li>Đăng ký tài khoản để nhận <strong>mã giảm giá 50,000 VND</strong>.</li>
+            </ul>
+            <button class="btn" onclick="showSection('home')">Quay lại Trang Chủ</button>
+        </div>
+    </section>
+</div>
+
+<footer>
+    <p>&copy; 2024 Cửa Hàng Giày Thời Trang. Mọi quyền được bảo lưu.</p>
+</footer>
+
+<script>
+
+    function showSection(sectionId) {
+        // Ẩn tất cả các section
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('hidden');
+        });
+
+        // Hiển thị section được chọn
+        document.getElementById(sectionId).classList.remove('hidden');
+    }
+</script>
+</body>
+</html>
